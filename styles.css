@@ -1,0 +1,37 @@
+body {
+  width: 300px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#searchInput {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#searchButton {
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #45a049;
+}
+
+.site-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
