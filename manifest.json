@@ -3,7 +3,7 @@
   "name": "YGO - Find Cards",
   "version": "1.0",
   "description": "Search for Yu-Gi-Oh! cards across multiple websites simultaneously",
-  "permissions": ["tabs"],
+  "permissions": ["tabs", "storage"],
   "browser_action": {
     "default_popup": "popup.html"
   },

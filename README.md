@@ -4,10 +4,12 @@ A Firefox extension that allows you to quickly search for Yu-Gi-Oh! cards across
 
 ## Features
 
-- Search across multiple websites with a single click
-- Configurable website selection
-- Opens each search in a new tab
+- Search across multiple websites with a single click or by pressing Enter
+- Configurable website selection with persistent preferences
+- Opens all searches in a new window
 - All major card-selling websites supported
+- Minimum 1 character required for search
+- Saves checkbox preferences between sessions
 
 ## Supported Websites
 
