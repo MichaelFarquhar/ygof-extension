@@ -15,24 +15,27 @@ document.addEventListener("DOMContentLoaded", async function () {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.id = `site${index}`;
-    // Use saved state if available, otherwise use default
     checkbox.checked = siteStates[`site${index}`] !== undefined ? siteStates[`site${index}`] : site.checked;
 
-    // Save checkbox state when changed
-    checkbox.addEventListener("change", async () => {
-      const states = await browser.storage.local.get("siteStates");
-      const updatedStates = { ...states.siteStates };
-      updatedStates[`site${index}`] = checkbox.checked;
-      await browser.storage.local.set({ siteStates: updatedStates });
-    });
+    const favicon = document.createElement("img");
+    favicon.className = "site-favicon";
+    favicon.src = `https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${site.baseUrl}&size=16`;
 
     const label = document.createElement("label");
     label.htmlFor = `site${index}`;
     label.textContent = site.name;
 
     div.appendChild(checkbox);
+    div.appendChild(favicon);
     div.appendChild(label);
     sitesContainer.appendChild(div);
+
+    checkbox.addEventListener("change", async () => {
+      const states = await browser.storage.local.get("siteStates");
+      const updatedStates = { ...states.siteStates };
+      updatedStates[`site${index}`] = checkbox.checked;
+      await browser.storage.local.set({ siteStates: updatedStates });
+    });
   });
 
   // Handle search functionality

@@ -72,3 +72,17 @@ body {
 .site-option input[type="checkbox"] {
   cursor: pointer;
 }
+
+/* Add to existing styles.css */
+.site-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0;
+}
+
+.site-favicon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
