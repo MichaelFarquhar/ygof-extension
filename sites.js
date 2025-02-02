@@ -27,12 +27,12 @@ const sites = [
     name: "Ebay.ca",
     checked: true,
     baseUrl: "ebay.ca",
-    url: "https://www.ebay.ca/sch/i.html?_nkw={searchTerm}+yugioh+card",
+    url: "https://www.ebay.ca/sch/i.html?_nkw=Yugioh+{searchTerm}&_from=R40&LH_PrefLoc=1&_sop=15",
   },
   {
     name: "TCGPlayer",
     checked: true,
     baseUrl: "tcgplayer.com",
-    url: "https://www.tcgplayer.com/search/yugioh/product?q={searchTerm}",
+    url: "https://www.tcgplayer.com/search/yugioh/product?q={searchTerm}&productLineName=yugioh&ProductTypeName=Cards",
   },
 ];
