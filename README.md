@@ -18,26 +18,27 @@ A Firefox extension that allows you to quickly search for Yu-Gi-Oh! cards across
 - CardBrawlers
 - CG Realm
 - TCGPlayer
+- Face to Face Games
 
-## Installation
+## Testing Extension
 
-1. Download the extension files
-2. Open Firefox and go to `about:debugging`
-3. Click "This Firefox" on the left sidebar
-4. Click "Load Temporary Add-on"
-5. Select any file from the extension directory
+1. Open Firefox and go to `about:debugging`
+2. Click "This Firefox" on the left sidebar
+3. Click "Load Temporary Add-on"
+4. Select any file from the extension directory
 
-## Adding New Sites
+## Building A New Release
 
-To add new sites, modify the `sites.js` file and add a new object to the `sites` array with the following structure:
+Distrbuted files are located within the `dist` folder. Upon building, a zip folder is generated and tag with the version, matching the same one found in package.json. To release a new version to distribution, perform the following:
 
-```javascript
-{
-  name: 'Site Name',
-  checked: true,  // default checkbox state
-  url: 'https://example.com/search?q={searchTerm}'
-}
+1. Update the version number in package.json.
+2. Run the following command:
+
+```bash
+npm run build
 ```
+
+3. Use the new zip file created in the base directory for release.
 
 ## License
 
