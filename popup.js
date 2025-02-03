@@ -80,6 +80,34 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   };
 
+  // Handle Check / Uncheck All Buttons
+  const checkAll = document.getElementById("checkAll");
+  const uncheckAll = document.getElementById("uncheckAll");
+
+  checkAll.addEventListener("click", async () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const updatedStates = {};
+
+    checkboxes.forEach((checkbox, index) => {
+      checkbox.checked = true;
+      updatedStates[`site${index}`] = true;
+    });
+
+    await browser.storage.local.set({ siteStates: updatedStates });
+  });
+
+  uncheckAll.addEventListener("click", async () => {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const updatedStates = {};
+
+    checkboxes.forEach((checkbox, index) => {
+      checkbox.checked = false;
+      updatedStates[`site${index}`] = false;
+    });
+
+    await browser.storage.local.set({ siteStates: updatedStates });
+  });
+
   // Enable/disable search button based on input
   searchInput.addEventListener("input", () => {
     searchButton.disabled = searchInput.value.trim().length === 0;
