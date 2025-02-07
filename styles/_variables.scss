@@ -1,0 +1,13 @@
+:root {
+  /* this has to be set to switch between light or dark */
+  // color-scheme: light dark;
+  color-scheme: light;
+
+  // Base background color
+  --color-bg: white;
+  --color-bg-dark: rgb(44, 44, 44);
+
+  // Base text color
+  --color-text: black;
+  --color-text-dark: white;
+}

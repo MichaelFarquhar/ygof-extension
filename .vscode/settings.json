@@ -7,5 +7,15 @@
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/node_modules": true
-  }
+  },
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed", // Output style: expanded, compressed
+      "extensionName": ".css", // Output file extension
+      "savePath": "/dist" // Output directory (relative to the root of your project)
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true, // Generate source maps
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"], // Autoprefixer settings
+  "liveSassCompile.settings.watchOnLaunch": true // Automatically watch for changes on launch
 }
