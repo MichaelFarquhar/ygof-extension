@@ -20,6 +20,12 @@ A Firefox extension that allows you to quickly search for Yu-Gi-Oh! cards across
 - TCGPlayer
 - Face to Face Games
 
+## Extension Development
+
+```bash
+npm run start
+```
+
 ## Testing Extension
 
 1. Open Firefox and go to `about:debugging`
